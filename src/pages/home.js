@@ -66,6 +66,35 @@ export default function Home() {
       fontFamily: "'DM Sans', sans-serif",
       overflowX: "hidden"
     }}>
+    <style>{`
+    @keyframes oceanWave {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .witness-title {
+      background: linear-gradient(
+        120deg,
+        #e2f4ff,
+        #a8e6ff,
+        #5ec4ff,
+        #2a9fd6,
+        #8dd8ff,
+        #c8eeff,
+        #5ec4ff,
+        #a8e6ff,
+        #e2f4ff,
+        #8dd8ff,
+        #5ec4ff
+      );
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: oceanWave 7s ease-in-out infinite;
+    }
+  `}</style>
 
       {/* Ambient background blobs */}
       <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0 }}>
@@ -106,15 +135,17 @@ export default function Home() {
         </div>
 
         {/* Main title */}
-        <h1 style={{
-          fontFamily: "'Syne', sans-serif",
-          fontSize: "clamp(72px, 12vw, 140px)",
-          fontWeight: 800, lineHeight: 0.9,
-          margin: "0 0 32px",
-          background: "linear-gradient(160deg, #ffffff 30%, #8dd8ff 70%, #5ec4ff 100%)",
-          WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-          letterSpacing: "-0.02em"
-        }}>
+        <h1 
+          className="witness-title"
+          style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: "clamp(72px, 12vw, 140px)",
+            fontWeight: 800, lineHeight: 0.9,
+            margin: "0 0 32px",
+            // background: "linear-gradient(160deg, #ffffff 30%, #8dd8ff 70%, #5ec4ff 100%)",
+            // WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+            letterSpacing: "-0.02em",
+          }}>
           Witness
         </h1>
 
@@ -126,8 +157,8 @@ export default function Home() {
           margin: "0 0 52px",
           fontWeight: 300
         }}>
-          Turn your phone into a legally-defensible evidence machine —<br />
-          <span style={{ color: "rgba(255,255,255,0.8)" }}>cryptographically sealed, permanently timestamped, and structured for court.</span>
+          Turn your phone into a legally-defensible evidence machine.<br />
+          <span style={{ color: "rgba(255,255,255,0.8)" }}>Cryptographically sealed, permanently timestamped, and structured for court.</span>
         </p>
 
         {/* CTA */}

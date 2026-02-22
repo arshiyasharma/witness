@@ -28,7 +28,7 @@ function Nav() {
       </Link>
 
       <div style={{ display: "flex", alignItems: "center", gap: "36px" }}>
-        {[["/" , "Home"], ["/why", "The Why"], ["/submit", "Submit Evidence"], ["/vault", "Vault"], ["/verify", "Verify"]].map(([path, label]) => (
+        {[["/" , "Home"], ["/why", "The Why and How"], ["/submit", "Submit Evidence"], ["/vault", "Vault"], ["/verify", "Verify"]].map(([path, label]) => (
           <Link key={path} to={path} style={{
             fontFamily: "'DM Mono', monospace",
             fontSize: "12px", letterSpacing: "0.12em",
