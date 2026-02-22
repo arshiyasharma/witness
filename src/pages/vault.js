@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const cyan = "#5ec4ff";
-const API = "witness-production-853d.up.railway.app";
+const API = "https://witness-production-853d.up.railway.app";
 
 // ── Fake demo data shown when no :id is in the URL ──
 const DEMO_DATA = {

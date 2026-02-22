@@ -2,7 +2,7 @@ import { useState, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 const cyan = "#5ec4ff";
-const API = "witness-production-853d.up.railway.app";
+const API = "https://witness-production-853d.up.railway.app";
 
 const STEPS = [
   { key: "uploading",   label: "Uploading & Hashing",      icon: "⬆", detail: "Generating SHA-256 fingerprint..." },
