@@ -1,6 +1,8 @@
 # Witness
 
 ### Seal your truth. Forever.
+<img width="1512" height="773" alt="Screenshot 2026-02-22 at 5 02 16 AM" src="https://github.com/user-attachments/assets/109ea0e9-77c5-431d-ac7d-6a285ea25fb1" />
+
 
 ## Inspiration
 
