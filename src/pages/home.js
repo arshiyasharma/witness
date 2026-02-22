@@ -119,7 +119,7 @@ export default function Home() {
         display: "flex", flexDirection: "column",
         alignItems: "center", justifyContent: "center",
         textAlign: "center",
-        padding: "120px 24px 80px"
+        padding: "120px 20px 60px"
       }}>
 
         {/* Eyebrow */}

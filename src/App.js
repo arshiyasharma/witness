@@ -9,6 +9,21 @@ import "./index.css";
 function Nav() {
   const location = useLocation();
   return (
+    <>
+      <style>{`
+      @media (max-width: 768px) {
+        nav {
+          padding: 14px 20px !important;
+        }
+        nav div {
+          gap: 16px !important;
+        }
+        nav a {
+          font-size: 9px !important;
+        }
+      }
+  `}</style>
+
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
       display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -66,6 +81,7 @@ function Nav() {
         </a>
       </div>
     </nav>
+    </>
   );
 }
 
