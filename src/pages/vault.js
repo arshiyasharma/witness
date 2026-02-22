@@ -8,7 +8,7 @@ const API = "witness-production-853d.up.railway.app";
 const DEMO_DATA = {
   _id: "demo",
   fileHash: "a3f8c2d1e4b7a9f0c2e5d8b1a4f7c0e3d6b9a2f5c8e1d4b7a0f3c6e9d2b5a8",
-  solanaTxId: "4xK9mNp2QrS7vW3yA6bD9eG2hJ5kL8nP1qT4uX7zA0bE3fH6iK9mN",
+  solanaTxId: "ANYvM5m5xtokguxpDsD3e8qaBBW6jTzUNtVjKTgAnqc4",
   timestamp: new Date().toISOString(),
   rawStatement: "Officer Martinez, badge #447, entered my property at 11:43 PM without a warrant. He was accompanied by two other officers. My neighbor witnessed the incident from across the street.",
   analysis: {
@@ -83,7 +83,7 @@ export default function Vault() {
   const report = analysis?.formalReport || "";
   const paragraphs = report.split("\n").filter(p => p.trim());
 
-  const explorerUrl = `https://explorer.solana.com/tx/${solanaTxId}?cluster=devnet`;
+  const explorerUrl = `https://explorer.solana.com/address/${solanaTxId}?cluster=devnet`;
   const sealedAt = new Date(timestamp).toLocaleString("en-US", {
     month: "long", day: "numeric", year: "numeric",
     hour: "numeric", minute: "2-digit", hour12: true

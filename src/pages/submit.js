@@ -46,7 +46,7 @@ export default function Submit() {
       formData.append("file", file);
       const submitRes = await fetch(`${API}/api/submit`, { method: "POST", body: formData });
       if (!submitRes.ok) throw new Error("File upload failed");
-      const { mongoId, solanaTxId } = await submitRes.json();
+      const { mongoId } = await submitRes.json();
       markDone("uploading");
 
       // ── STEP 2: Sealing visual delay (already done in step 1, show for UX) ──
@@ -86,8 +86,6 @@ export default function Submit() {
       setCurrentStep(null);
     }
   };
-
-  const stepIndex = STEPS.findIndex(s => s.key === currentStep);
 
   return (
     <div style={{
@@ -288,7 +286,6 @@ export default function Submit() {
               {STEPS.map((step, i) => {
                 const isDone = completedSteps.includes(step.key);
                 const isActive = currentStep === step.key && !isDone;
-                const isPending = !isDone && !isActive;
 
                 return (
                   <div
