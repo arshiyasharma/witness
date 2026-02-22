@@ -23,7 +23,10 @@ const elevenlabs = new ElevenLabsClient({
 });
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://witness-jet.vercel.app", "http://localhost:3000"], 
+  methods: ["GET", "POST"],
+}));
 app.use(express.json());
 
 // ------------------- MongoDB -------------------

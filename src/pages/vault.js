@@ -83,7 +83,9 @@ export default function Vault() {
   const report = analysis?.formalReport || "";
   const paragraphs = report.split("\n").filter(p => p.trim());
 
-  const explorerUrl = `https://explorer.solana.com/address/${solanaTxId}?cluster=devnet`;
+  const explorerUrl = doc._id === "demo"
+    ? `https://explorer.solana.com/address/${solanaTxId}?cluster=devnet`
+    : `https://explorer.solana.com/tx/${solanaTxId}?cluster=devnet`;
   const sealedAt = new Date(timestamp).toLocaleString("en-US", {
     month: "long", day: "numeric", year: "numeric",
     hour: "numeric", minute: "2-digit", hour12: true
