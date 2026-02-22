@@ -181,6 +181,8 @@ const STACK = [
   { name: "Solar Pro 3 (OpenRouter)", role: "AI Legal Analysis", color: "#5ec4ff", why: "Entity extraction, incident classification, urgency scoring, and 3-paragraph court-ready report generation from raw unstructured testimony." },
   { name: "MongoDB Atlas", role: "Evidence Vault", color: "#00ed64", why: "Flexible document schema stores the full atomic evidence record: hash, Solana tx ID, audio, AI report, and metadata in one document." },
   { name: "SHA-256 (Node crypto)", role: "File Fingerprinting", color: "#fbbf24", why: "Industry-standard cryptographic hash function. Any single-bit alteration to the file produces a completely different hash — making tampering mathematically detectable." },
+  { name: "Railway", role: "Backend Hosting", color: "#9b59b6", why: "Runs the Node.js/Express server 24/7 in the cloud. Auto-deploys on push, handles environment variables securely, and scales without configuration." },
+  { name: "Vercel", role: "Frontend Hosting", color: "#ffffff", why: "Global CDN deployment for the React frontend. Handles routing, HTTPS, and instant cache invalidation — the live site updates in under 2 minutes on redeploy." },
 ];
 
 // ── MAIN PAGE ──

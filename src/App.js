@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Submit from "./pages/submit";
 import Vault from "./pages/vault";
 import Why from "./pages/why";
+import Verify from "./pages/verify";
 import "./index.css";
 
 function Nav() {
@@ -27,7 +28,7 @@ function Nav() {
       </Link>
 
       <div style={{ display: "flex", alignItems: "center", gap: "36px" }}>
-        {[["/" , "Home"], ["/why", "The Why"], ["/submit", "Submit Evidence"], ["/vault", "Vault"]].map(([path, label]) => (
+        {[["/" , "Home"], ["/why", "The Why"], ["/submit", "Submit Evidence"], ["/vault", "Vault"], ["/verify", "Verify"]].map(([path, label]) => (
           <Link key={path} to={path} style={{
             fontFamily: "'DM Mono', monospace",
             fontSize: "12px", letterSpacing: "0.12em",
@@ -78,6 +79,7 @@ function App() {
         <Route path="/submit" element={<Submit />} />
         <Route path="/vault/:id" element={<Vault />} />
         <Route path="/vault" element={<Vault />} />
+        <Route path="/verify" element={<Verify />} />
       </Routes>
     </Router>
   );

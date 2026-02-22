@@ -130,6 +130,32 @@ export default function Vault() {
           </p>
         </div>
 
+        {/* ── Save Your Link Banner ── */}
+        <div className="vault-card" style={{
+          background: "rgba(251,191,36,0.05)",
+          border: "1px solid rgba(251,191,36,0.2)",
+          borderRadius: 14, padding: "16px 24px",
+          marginBottom: 20,
+          display: "flex", alignItems: "center", gap: 16,
+          animationDelay: "0.05s"
+        }}>
+          <span style={{ fontSize: 20, flexShrink: 0 }}>⚠</span>
+          <div>
+            <div style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: 11, letterSpacing: "0.12em",
+              color: "#fbbf24", marginBottom: 4
+            }}>SAVE THIS PAGE</div>
+            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
+              This URL is the only way to access your evidence vault. Bookmark it, email it to yourself, or share it with your lawyer.
+              Your Vault ID: <span style={{
+                fontFamily: "'DM Mono', monospace",
+                color: "rgba(255,255,255,0.8)", fontSize: 12
+              }}>{id || "__YOUR_EVIDENCE_ID_COMES_HERE_ON_GENERATION__"}</span>
+            </div>
+          </div>
+        </div>
+
         {/* ── Blockchain Seal Card ── */}
         <div className="vault-card" style={{
           background: "rgba(94,196,255,0.05)",

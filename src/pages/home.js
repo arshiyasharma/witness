@@ -262,6 +262,37 @@ export default function Home() {
             </div>
           ))}
         </div>
+        {/* ── Verify CTA ── */}
+        <div ref={addRef} style={{
+          ...fadeStyle,
+          textAlign: "center", marginTop: 40
+        }}>
+          <button
+            onClick={() => navigate("/verify")}
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: "12px", letterSpacing: "0.15em",
+              padding: "13px 32px",
+              background: "transparent",
+              color: "rgba(255,255,255,0.5)",
+              border: "1px solid rgba(255,255,255,0.12)",
+              borderRadius: "100px",
+              cursor: "pointer",
+              transition: "all 0.2s",
+              display: "inline-flex", alignItems: "center", gap: 8
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.borderColor = "rgba(94,196,255,0.4)";
+              e.currentTarget.style.color = cyan;
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)";
+              e.currentTarget.style.color = "rgba(255,255,255,0.5)";
+            }}
+          >
+            <span>🔍</span> Learn how anyone can independently verify your proof
+          </button>
+        </div>
       </section>
 
       {/* ───── FINAL CTA ───── */}
